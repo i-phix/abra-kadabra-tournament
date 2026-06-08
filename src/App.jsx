@@ -1485,7 +1485,7 @@ export default function App() {
       const s = json.currentSeason?.startDate?.slice(0, 4) || "";
       setTestResult({
         ok: true,
-        message: `Key valid. ${n}${s ? ` (${s})` : ""} accessible.`,
+        message: `Acess granted. ${n}${s ? ` (${s})` : ""} accessible.`,
       });
     } catch (e) {
       setTestResult({ ok: false, message: e.message || "Test failed." });
@@ -2200,7 +2200,7 @@ export default function App() {
                         onClick={() => testApiKey(apiKey)}
                         disabled={testing}
                       >
-                        {testing ? "Testing..." : "Test key"}
+                        {testing ? "Testing..." : "Test Access"}
                       </button>
                     </div>
                     {testResult && (
