@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -180,5 +180,299 @@
   &::after {
     right: 0;
     border-right-color: var(--border);
+  }
+}
+/* ═══════════════════════════════════════════
+   MOBILE RESPONSIVE FIXES
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 640px) {
+  /* ── NAV ── */
+  .nav {
+    padding: 0 16px;
+    height: auto;
+    min-height: 54px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav-brand {
+    font-size: 15px;
+    flex: 1 1 100%;
+  }
+  .nav-actions {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .nav-btn {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  /* ── PAGE ── */
+  .page {
+    padding: 24px 16px 48px;
+  }
+  .page-wide {
+    padding: 20px 12px 48px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+
+  /* ── GROUP GRID → single column ── */
+  .group-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* ── TEAM CHIPS ── */
+  .team-chip {
+    height: 38px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  /* ── PICKS SUMMARY ── */
+  .picks-summary {
+    padding: 12px 14px;
+  }
+  .pick-chip,
+  .pick-chip-empty {
+    height: 28px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  /* ── LEADERBOARD TABLE ── */
+  .lb-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0 -12px;
+  }
+  table {
+    min-width: 700px;
+    font-size: 12px;
+  }
+  thead th {
+    padding: 9px 8px;
+    font-size: 10px;
+  }
+  td {
+    padding: 8px 8px;
+  }
+  tfoot td {
+    padding: 9px 8px;
+  }
+  .rank-cell {
+    font-size: 12px;
+  }
+  .team-cell {
+    font-size: 11px;
+    max-width: 90px;
+  }
+  .total-cell {
+    font-size: 13px;
+  }
+
+  /* ── LB HEADER ── */
+  .lb-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .lb-viewer {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .lb-meta {
+    font-size: 12px;
+  }
+
+  /* ── EDIT BANNER ── */
+  .edit-banner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+  }
+  .edit-banner-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /* ── BUTTONS ── */
+  .btn-group {
+    flex-direction: column;
+    margin-top: 16px;
+  }
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  /* ── LOGIN CARD ── */
+  .login-card {
+    max-width: 100%;
+    margin: 0 0 28px;
+    padding: 20px;
+  }
+
+  /* ── ADMIN MODAL ── */
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: 92vh;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 16px 32px;
+  }
+
+  /* ── ADMIN TEAMS GRID → single column ── */
+  .admin-teams-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* ── KNOCKOUT GRID → single column ── */
+  .knockout-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  /* ── GROUP TABS ── */
+  .group-tabs {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .group-tab {
+    flex: 1 1 auto;
+    height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* ── WDL BUTTONS ── */
+  .wdl-btn {
+    height: 34px;
+    font-size: 12px;
+  }
+  .wdl-match-label {
+    font-size: 11px;
+    width: 40px;
+  }
+
+  /* ── API PANEL ── */
+  .api-row {
+    gap: 6px;
+  }
+  .btn-sync {
+    width: 100%;
+    margin-top: 4px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  /* ── ADMIN PLAYER ROW ── */
+  .admin-player-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .admin-player-confirm {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* ── FIXTURE ROW ── */
+  .fixture-team {
+    font-size: 11.5px;
+  }
+  .fixture-score {
+    font-size: 11.5px;
+    margin: 0 4px;
+    min-width: 46px;
+    padding: 3px 6px;
+  }
+  .fixture-status {
+    font-size: 10px;
+  }
+
+  /* ── CONFIRM INLINE ── */
+  .confirm-inline {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .confirm-actions {
+    margin-left: 0;
+  }
+
+  /* ── PROGRESS BAR spacing ── */
+  .progress-bar {
+    margin-bottom: 24px;
+  }
+
+  /* ── FIELD ── */
+  .field {
+    margin-bottom: 20px;
+  }
+  .field label {
+    font-size: 12px;
+  }
+  .input {
+    padding: 11px 12px;
+    font-size: 15px;
+  }
+
+  /* ── ERROR ── */
+  .error {
+    font-size: 12.5px;
+  }
+
+  /* ── LB TABLE scroll hint ── */
+  .lb-table-hint {
+    font-size: 11px;
+    color: #a1a1aa;
+    text-align: right;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .nav-brand {
+    font-size: 13px;
+  }
+  .group-card-body {
+    gap: 5px;
+  }
+  .team-chip {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
   }
 }
