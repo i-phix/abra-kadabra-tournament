@@ -2182,25 +2182,13 @@ export default function App() {
                 {apiKey ? (
                   <div style={{ marginBottom: 10 }}>
                     <div className="api-row">
-                      <span className="badge-ok">
-                        Key saved ({apiKey.slice(0, 8)}...)
-                      </span>
+                      <span className="badge-ok">Fetch scores</span>
                       <button
                         className="btn-sm"
                         onClick={() => testApiKey(apiKey)}
                         disabled={testing}
                       >
                         {testing ? "Testing..." : "Test key"}
-                      </button>
-                      <button
-                        className="btn-sm outline"
-                        onClick={() => {
-                          localStorage.removeItem(AK);
-                          setApiKey("");
-                          setTestResult(null);
-                        }}
-                      >
-                        Remove
                       </button>
                     </div>
                     {testResult && (
