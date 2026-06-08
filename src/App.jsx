@@ -1073,7 +1073,7 @@ export default function App() {
 
   // Remove player confirmation
   const [confirmRemoveId, setConfirmRemoveId] = useState(null);
-
+  //Test
   const [adminOpen, setAdminOpen] = useState(false);
   const [draft, setDraft] = useState(() => load(RK, {}));
   const [adminGroup, setAdminGroup] = useState("A");
