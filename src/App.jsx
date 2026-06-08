@@ -1135,7 +1135,7 @@ export default function App() {
   function handleSubmit() {
     setError("");
     if (!name.trim()) {
-      setError("Enter your name.");
+      setError("Enter Your name / alias.");
       return;
     }
     if (Object.values(picks).some((v) => !v)) {
@@ -1161,7 +1161,7 @@ export default function App() {
     setViewerError("");
     const v = viewerInput.trim();
     if (!v) {
-      setViewerError("Enter your name to continue.");
+      setViewerError("Enter Your name / alias to continue.");
       return;
     }
     const exists = players.find(
@@ -1499,12 +1499,12 @@ export default function App() {
             </div>
 
             <div className="field">
-              <label>Your name</label>
+              <label>Your name / alias</label>
               <input
                 className="input"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name"
+                placeholder="Enter Your name / alias"
                 onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
               />
             </div>
@@ -1584,7 +1584,7 @@ export default function App() {
                     value={viewerInput}
                     onChange={(e) => setViewerInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleViewerLogin()}
-                    placeholder="Your name"
+                    placeholder="Your name / alias"
                   />
                 </div>
                 {viewerError && <p className="error">{viewerError}</p>}
