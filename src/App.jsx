@@ -1244,8 +1244,8 @@ export default function App() {
   }
 
   async function apiFetch(path, key) {
-    const res = await fetch(`/api/football/${path}`, {
-      headers: { "x-auth-token": key },
+    const res = await fetch(`https://api.football-data.org/v4/${path}`, {
+      headers: { "X-Auth-Token": key },
     });
     if (!res.ok) {
       const body = await res.json().catch(() => ({}));
