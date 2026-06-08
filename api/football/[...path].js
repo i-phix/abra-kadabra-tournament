@@ -4,21 +4,23 @@ export default async function handler(req, res) {
   const url = `https://api.football-data.org/v4/${apiPath}`;
   const key = process.env.API_FOOTBALL_KEY;
 
-  // Temporary debug — remove after fixing
-  if (!key) {
-    return res.status(500).json({ message: "No API key found in env" });
-  }
-
   try {
     const response = await fetch(url, {
       headers: {
-        "X-Auth-Token": key,
+        "X-Auth-Token": key || "",
         "Content-Type": "application/json",
       },
     });
     const data = await response.json();
-    res.status(response.status).json(data);
+    // Return full debug info
+    res.status(200).json({
+      status: response.status,
+      keyPresent: !!key,
+      keyPreview: key ? key.slice(0, 8) : "MISSING",
+      url,
+      data,
+    });
   } catch (err) {
-    res.status(500).json({ message: err.message || "Proxy error" });
+    res.status(500).json({ message: err.message });
   }
 }
