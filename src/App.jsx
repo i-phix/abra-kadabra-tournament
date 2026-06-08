@@ -490,7 +490,7 @@ const css = `
     Padding:30px;
   }
   .lb-meta { font-size: 13px; color: #71717a; margin-top: 24px; }
-  .lb-viewer { font-size: 13px; color: #ffffff; display: block; align-items: center; gap: 10px; }
+  .lb-viewer { font-size: 13px; color: #0c0c0c; display: block; align-items: center; gap: 10px; }
   .lb-table-wrap { border-radius: none; border: 1px solid #afafaf; overflow-x: auto; overflow: hidden; }
   table { width: 100%; border-collapse: collapse; min-width: 900px; font-size: 13px; }
   thead tr { background: #18181a; }
@@ -1893,7 +1893,6 @@ export default function App() {
                     <p className="lb-meta">
                       <span
                         style={{
-                          backgroundColor: "#6acad4",
                           color: "#011214",
                           padding: "18px",
                           fontWeight: 700,
