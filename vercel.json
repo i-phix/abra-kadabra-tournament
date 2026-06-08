@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/api/football/(.*)", "destination": "/api/football/[...path]" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
