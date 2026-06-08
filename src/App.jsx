@@ -1892,8 +1892,8 @@ export default function App() {
                     <p
                       className="lb-meta"
                       style={{
-                        backgroundColor: "green",
-                        color: "#a6ecf5",
+                        backgroundColor: "#a6ecf5",
+                        color: "#010b0c",
                         padding: "12px",
                         fontWeight: 700,
                         margin: "40px",
