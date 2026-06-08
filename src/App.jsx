@@ -1894,7 +1894,7 @@ export default function App() {
                         style={{
                           backgroundColor: "#6acad4",
                           color: "#011214",
-                          padding: "52px",
+                          padding: "25px",
                           fontWeight: 700,
                         }}
                       >
@@ -1905,7 +1905,7 @@ export default function App() {
                         style={{
                           backgroundColor: "",
                           color: "#092714",
-                          padding: "52px",
+                          padding: "25px",
                           fontWeight: 700,
                         }}
                       >
@@ -1916,7 +1916,7 @@ export default function App() {
                         style={{
                           backgroundColor: "red",
                           color: "#440c07",
-                          padding: "52px",
+                          padding: "25px",
                           fontWeight: 700,
                         }}
                       >
