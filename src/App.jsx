@@ -188,7 +188,7 @@ function computePlayerData(picks, teamResults) {
 
 const SK = "abrakadabra_players";
 const RK = "abrakadabra_team_results";
-const AK = "b3cc166fc3364a9f93cf6063350c4aec";
+const AK = "0d73bad5c3114f288747caef2d389819";
 const CK = "abrakadabra_current_user";
 
 function load(key, fb) {
@@ -1086,10 +1086,10 @@ export default function App() {
   const [adminConfirmRemoveId, setAdminConfirmRemoveId] = useState(null);
 
   const [apiKey, setApiKey] = useState(() =>
-    loadStr(AK, "b3cc166fc3364a9f93cf6063350c4aec"),
+    loadStr(AK, "0d73bad5c3114f288747caef2d389819"),
   );
   const [apiKeyInput, setApiKeyInput] = useState(
-    "b3cc166fc3364a9f93cf6063350c4aec",
+    "0d73bad5c3114f288747caef2d389819",
   );
   const [syncing, setSyncing] = useState(false);
   const [syncResult, setSyncResult] = useState(null);
