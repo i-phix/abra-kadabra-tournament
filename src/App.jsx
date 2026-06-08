@@ -1892,11 +1892,10 @@ export default function App() {
                     <p className="lb-meta">
                       <span
                         style={{
-                          backgroundColor: "green",
-                          color: "#84d3dd",
-                          padding: "12px",
+                          backgroundColor: "#6acad4",
+                          color: "#011214",
+                          padding: "52px",
                           fontWeight: 700,
-                          margin: "40px",
                         }}
                       >
                         {players.length} player{players.length !== 1 ? "s" : ""}
@@ -1904,11 +1903,10 @@ export default function App() {
                       &nbsp;&nbsp;
                       <span
                         style={{
-                          backgroundColor: "green",
+                          backgroundColor: "",
                           color: "#092714",
-                          padding: "12px",
+                          padding: "52px",
                           fontWeight: 700,
-                          margin: "40px",
                         }}
                       >
                         Contender
@@ -1918,9 +1916,8 @@ export default function App() {
                         style={{
                           backgroundColor: "red",
                           color: "#440c07",
-                          padding: "12px",
+                          padding: "52px",
                           fontWeight: 700,
-                          margin: "40px",
                         }}
                       >
                         Eliminated
