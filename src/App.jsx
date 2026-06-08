@@ -1889,17 +1889,18 @@ export default function App() {
                 <div className="lb-header">
                   <div>
                     <h1>Leaderboard</h1>
-                    <p
-                      className="lb-meta"
-                      style={{
-                        backgroundColor: "#a6ecf5",
-                        color: "#010b0c",
-                        padding: "12px",
-                        fontWeight: 700,
-                        margin: "40px",
-                      }}
-                    >
-                      {players.length} player{players.length !== 1 ? "s" : ""}
+                    <p className="lb-meta">
+                      <span
+                        style={{
+                          backgroundColor: "green",
+                          color: "#84d3dd",
+                          padding: "12px",
+                          fontWeight: 700,
+                          margin: "40px",
+                        }}
+                      >
+                        {players.length} player{players.length !== 1 ? "s" : ""}
+                      </span>
                       &nbsp;&nbsp;
                       <span
                         style={{
