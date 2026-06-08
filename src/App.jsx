@@ -1896,7 +1896,7 @@ export default function App() {
                         color: "#84d3dd",
                         padding: "12px",
                         fontWeight: 700,
-                        marginTop: "20px",
+                        marginTop: "40px",
                       }}
                     >
                       {players.length} player{players.length !== 1 ? "s" : ""}
@@ -1907,7 +1907,7 @@ export default function App() {
                           color: "#092714",
                           padding: "12px",
                           fontWeight: 700,
-                          marginTop: "20px",
+                          marginTop: "40px",
                         }}
                       >
                         Contender
@@ -1919,7 +1919,7 @@ export default function App() {
                           color: "#440c07",
                           padding: "12px",
                           fontWeight: 700,
-                          marginTop: "20px",
+                          marginTop: "40px",
                         }}
                       >
                         Eliminated
