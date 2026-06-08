@@ -489,8 +489,8 @@ const css = `
     margin-bottom: 40px;
     Padding:30px;
   }
-  .lb-meta { font-size: 13px; color: #71717a; margin-top: 4px; }
-  .lb-viewer { font-size: 13px; color: #ffffff; display: flex; align-items: center; gap: 10px; }
+  .lb-meta { font-size: 13px; color: #71717a; margin-top: 24px; }
+  .lb-viewer { font-size: 13px; color: #ffffff; display: block; align-items: center; gap: 10px; }
   .lb-table-wrap { border-radius: none; border: 1px solid #afafaf; overflow-x: auto; overflow: hidden; }
   table { width: 100%; border-collapse: collapse; min-width: 900px; font-size: 13px; }
   thead tr { background: #18181a; }
@@ -1895,7 +1895,7 @@ export default function App() {
                         style={{
                           backgroundColor: "#6acad4",
                           color: "#011214",
-                          padding: "25px",
+                          padding: "18px",
                           fontWeight: 700,
                         }}
                       >
@@ -1906,7 +1906,7 @@ export default function App() {
                         style={{
                           backgroundColor: "green",
                           color: "#092714",
-                          padding: "25px",
+                          padding: "18px",
                           fontWeight: 700,
                         }}
                       >
@@ -1917,7 +1917,7 @@ export default function App() {
                         style={{
                           backgroundColor: "red",
                           color: "#440c07",
-                          padding: "25px",
+                          padding: "18px",
                           fontWeight: 700,
                         }}
                       >
