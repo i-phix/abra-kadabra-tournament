@@ -1212,9 +1212,7 @@ export default function App() {
     setPlayers(updated);
     persist(updated, null);
     setConfirmRemoveId(null);
-    // If the removed player was being edited, cancel
     if (editingPlayer === id) cancelEdit();
-    // If current user was removed, log out
     const removed = players.find((p) => p.id === id);
     if (removed && removed.name.toLowerCase() === currentUser.toLowerCase()) {
       persistUser("");
@@ -1243,8 +1241,9 @@ export default function App() {
     setAdminOpen(false);
   }
 
+  // ── FIXED: routes through Vercel proxy to avoid CORS ─────────────────────
   async function apiFetch(path, key) {
-    const res = await fetch(`https://api.football-data.org/v4/${path}`, {
+    const res = await fetch(`/api/football/${path}`, {
       headers: { "X-Auth-Token": key },
     });
     if (!res.ok) {
