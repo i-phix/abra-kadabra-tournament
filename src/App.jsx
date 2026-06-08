@@ -486,7 +486,8 @@ const css = `
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    Padding:30px;
   }
   .lb-meta { font-size: 13px; color: #71717a; margin-top: 4px; }
   .lb-viewer { font-size: 13px; color: #ffffff; display: flex; align-items: center; gap: 10px; }
@@ -1903,7 +1904,7 @@ export default function App() {
                       &nbsp;&nbsp;
                       <span
                         style={{
-                          backgroundColor: "",
+                          backgroundColor: "green",
                           color: "#092714",
                           padding: "25px",
                           fontWeight: 700,
