@@ -1893,10 +1893,10 @@ export default function App() {
                       className="lb-meta"
                       style={{
                         backgroundColor: "green",
-                        color: "#84d3dd",
+                        color: "#a6ecf5",
                         padding: "12px",
                         fontWeight: 700,
-                        marginTop: "40px",
+                        margin: "40px",
                       }}
                     >
                       {players.length} player{players.length !== 1 ? "s" : ""}
@@ -1907,7 +1907,7 @@ export default function App() {
                           color: "#092714",
                           padding: "12px",
                           fontWeight: 700,
-                          marginTop: "40px",
+                          margin: "40px",
                         }}
                       >
                         Contender
@@ -1919,7 +1919,7 @@ export default function App() {
                           color: "#440c07",
                           padding: "12px",
                           fontWeight: 700,
-                          marginTop: "40px",
+                          margin: "40px",
                         }}
                       >
                         Eliminated
