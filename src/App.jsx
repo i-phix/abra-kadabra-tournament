@@ -485,12 +485,39 @@ const css = `
   .lb-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 40px;
-    Padding:30px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 12px;
   }
-  .lb-meta { font-size: 13px; color: #71717a; margin-top: 24px; }
-  .lb-viewer { font-size: 13px; color: #0c0c0c; display: block; align-items: center; gap: 10px; }
+  .lb-meta {
+    font-size: 13px;
+    color: #71717a;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .lb-legend-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    padding: 0 9px;
+    border-radius: 5px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+  .lb-viewer {
+    font-size: 13px;
+    color: #0c0c0c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
   .lb-table-wrap { border-radius: none; border: 1px solid #afafaf; overflow-x: auto; overflow: hidden; }
   table { width: 100%; border-collapse: collapse; min-width: 900px; font-size: 13px; }
   thead tr { background: #18181a; }
@@ -847,6 +874,7 @@ const css = `
   .admin-teams-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
   .divider { border: none; border-top: 1px solid #f0f0ee; margin: 12px 0; }
+
   /* ═══════════════════════════════════════════
    MOBILE RESPONSIVE FIXES
    ═══════════════════════════════════════════ */
@@ -930,15 +958,17 @@ const css = `
   .lb-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 16px;
   }
+  .lb-meta {
+    gap: 6px;
+    margin-top: 4px;
+  }
   .lb-viewer {
-    flex-wrap: wrap;
     gap: 8px;
     width: 100%;
   }
-  .lb-meta { font-size: 12px; }
 
   /* ── EDIT BANNER ── */
   .edit-banner {
@@ -956,7 +986,7 @@ const css = `
     flex-direction: column;
     margin-top: 16px;
   }
-  .btn-secondary {
+  .btn-group .btn-secondary {
     width: 100%;
     justify-content: center;
     height: 40px;
@@ -1891,34 +1921,18 @@ export default function App() {
                   <div>
                     <h1>Leaderboard</h1>
                     <p className="lb-meta">
-                      <span
-                        style={{
-                          color: "#011214",
-                          padding: "18px",
-                          fontWeight: 700,
-                        }}
-                      >
+                      <span style={{ color: "#52525b", fontWeight: 500 }}>
                         {players.length} player{players.length !== 1 ? "s" : ""}
                       </span>
-                      &nbsp;&nbsp;
                       <span
-                        style={{
-                          backgroundColor: "green",
-                          color: "#092714",
-                          padding: "18px",
-                          fontWeight: 700,
-                        }}
+                        className="lb-legend-badge"
+                        style={{ background: "#16a34a" }}
                       >
                         Contender
                       </span>
-                      &nbsp;&nbsp;
                       <span
-                        style={{
-                          backgroundColor: "red",
-                          color: "#440c07",
-                          padding: "18px",
-                          fontWeight: 700,
-                        }}
+                        className="lb-legend-badge"
+                        style={{ background: "#dc2626" }}
                       >
                         Eliminated
                       </span>
